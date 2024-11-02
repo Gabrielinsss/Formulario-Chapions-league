@@ -1,0 +1,76 @@
+ <!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de Equipos para la Champions</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .container {
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 400px;
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+        label {
+            display: block;
+            margin: 10px 0 5px;
+            font-weight: bold;
+        }
+        select, textarea, button {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        button {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>¿Quién merece ganar la Champions?</h1>
+        <form action="https://example.com/votar" method="POST">
+            <label for="team">Elige tu equipo favorito:</label>
+            <select id="team" name="team" required>
+                <option value="" disabled selected>Selecciona un equipo</option>
+                <option value="real_madrid">Real Madrid</option>
+                <option value="barcelona">Barcelona</option>
+                <option value="manchester_city">Manchester City</option>
+                <option value="bayern_munich">Bayern Múnich</option>
+                <option value="paris_saint_germain">Paris Saint-Germain</option>
+                <option value="chelsea">Chelsea</option>
+                <option value="juventus">Juventus</option>
+                <option value="liverpool">Liverpool</option>
+            </select>
+            
+            <label for="comments">¿Por qué crees que lo merece?</label>
+            <textarea id="comments" name="comments" rows="4" placeholder="Escribe tu comentario aquí..."></textarea>
+            
+            <button type="submit">Enviar Voto</button>
+        </form>
+    </div>
+</body>
+</html>
